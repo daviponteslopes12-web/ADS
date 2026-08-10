@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos Nós? | Estudantes de Programação</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CSS CDN para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkblue: {
+                            950: '#070d1b',
+                            900: '#0b132b',
+                            800: '#1c2541',
+                            700: '#3a506b',
+                        },
+                        gold: {
+                            400: '#ffd700',
+                            500: '#d4af37',
+                            600: '#b89728',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animações customizadas e efeitos visuais */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .gold-glow {
+            animation: pulseGlow 3s infinite;
+        }
+
+        /* Transições suaves para scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gradiente de fundo dinâmico */
+        body {
+            background: linear-gradient(135deg, #070d1b 0%, #0b132b 50%, #1c2541 100%);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fff 0%, #ffd700 50%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .gold-border:hover {
+            border-color: rgba(212, 175, 55, 0.9);
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-container h4 {
+            margin: 10px 0 0;
+            font-size: 18px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .contact-links a {
+            color: #767575;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .contact-links a:hover {
+            color: #0077b5;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-gold-500 selection:text-darkblue-950">
+
+    <!-- TELA INICIAL (HERO SECTION) -->
+    <section id="home" class="min-h-screen flex flex-col items-center justify-center relative px-6 text-center">
+        <!-- Elementos decorativos de fundo animados -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gold-500 rounded-full filter blur-[120px] animate-float">
+            </div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-darkblue-700 rounded-full filter blur-[100px] animate-float"
+                style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="z-10 max-w-4xl mx-auto animate-fade-in">
+            <span
+                class="text-gold-500 tracking-[0.2em] uppercase text-sm md:text-base font-semibold mb-4 inline-block border-b border-gold-500/40 pb-1">
+                Portfólio da Equipe
+            </span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 gold-gradient-text">
+                Quem Somos Nós?
+            </h1>
+            <p class="text-gray-300 text-lg md:text-2xl font-light max-w-2xl mx-auto mb-10 leading-relaxed">
+                [Breve introdução inspiradora da dupla de estudantes de programação — Edite este texto conforme desejar]
+            </p>
+            <a href="#bloco-1"
+                class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-gold-600 to-gold-400 text-darkblue-950 font-bold text-lg shadow-lg hover:shadow-gold-500/50 transition-all duration-300 transform hover:-translate-y-1">
+                <span>Conheça Nossa Jornada</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 animate-bounce" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Indicador de scroll -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-70">
+            <span class="text-xs uppercase tracking-widest text-gold-400 mb-2">Role para explorar</span>
+            <div class="w-6 h-10 border-2 border-gold-500/50 rounded-full flex justify-center p-1">
+                <div class="w-1.5 h-3 bg-gold-400 rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DASHBOARD / BLOCOS DE CONTEÚDO -->
+    <main class="max-w-7xl mx-auto px-6 py-20 space-y-32">
+
+        <!-- BLOCO 1: APRESENTAÇÃO ESTUDANTE 1 -->
+        <section id="bloco-1"
+            class="reveal grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-darkblue-900/60 backdrop-blur-md p-8 md:p-12 rounded-3xl gold-border shadow-2xl">
+            <div class="lg:col-span-5 flex flex-col items-center">
+                <!-- Espaço para Imagem do Estudante 1 -->
+                <div
+                    class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden gold-border bg-darkblue-800 flex items-center justify-center group shadow-xl">
+                    <!-- Substitua a tag img abaixo pela imagem real do Estudante 1 -->
+                    <!-- <img src="caminho-da-foto-1.jpg" alt="Foto do Estudante 1" class="w-full h-full object-cover"> -->
+                    <div class="text-center p-6 text-gray-400 group-hover:text-gold-400 transition-colors">
+                        <img src="assets/MarcosImagem.png" alt="Foto de Marcos - Estudante 1"
+                            class=" mx-auto mb-3 rounded-full object-cover">
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold">Membro da Equipe</span>
+                    <h3 class="font-serif text-2xl font-bold text-white mt-1">Marcos Vinicius</h3>
+                </div>
+            </div>
+            <div class="lg:col-span-7 space-y-6">
+                <div
+                    class="inline-block px-4 py-1.5 rounded-full bg-gold-500/10 text-gold-400 text-xs font-bold tracking-widest uppercase border border-gold-500/30">
+                    • Apresentação Pessoal
+                </div>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-white">
+                    Conheça <span class="gold-gradient-text">Marcos Vinicius</span>
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg leading-relaxed font-light">
+                    Meu nome é Marcos, tenho 20 anos. Alguns dos hobbies que posso destacar são corrida,
+                    musculação,futebol e escutar música. Escolhi entrar no TI pois sempre gostei de tecnologia e
+                    inovação, tenho formação técnica em informática mas ainda não atuei na área. Atualmente trabalho com
+                    o processo de soldagem MIG/MAG.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-4">
+                    <div class="p-4 rounded-xl bg-darkblue-800/80 gold-border">
+                        <span class="block text-gold-400 font-bold text-sm">Foco Principal</span>
+                        <span class="text-gray-300 text-sm">DataScience</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-darkblue-800/80 gold-border">
+                        <span class="block text-gold-400 font-bold text-sm">Linguagem Favorita</span>
+                        <span class="text-gray-300 text-sm">Javascript</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-darkblue-800/80 gold-border col-span-2 md:col-span-1">
+                        <span class="block text-gold-400 font-bold text-sm">Meta Atual</span>
+                        <span class="text-gray-300 text-sm">Aprofundamento em DataScience</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOCO 2: APRESENTAÇÃO ESTUDANTE 2 -->
+        <section
+            class="reveal grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-darkblue-900/60 backdrop-blur-md p-8 md:p-12 rounded-3xl gold-border shadow-2xl">
+            <div class="lg:col-span-7 space-y-6 order-2 lg:order-1">
+                <div
+                    class="inline-block px-4 py-1.5 rounded-full bg-gold-500/10 text-gold-400 text-xs font-bold tracking-widest uppercase border border-gold-500/30">
+                    • Apresentação Pessoal
+                </div>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-white">
+                    Conheça <span class="gold-gradient-text">Davi A. Lopes</span>
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg leading-relaxed font-light">
+                    Olá, meu nome é Davi Lopes e eu sou um estudante de desenvolvimento web!
+                    Conheci a área de desenvolvimento aos 16 anos e a cada dia me sinto mais curiosos em relação a essa
+                    área!
+                    Eu gosto de jogar basquete, desenvolver projetos que me ajudam no dia a dia com inteligência
+                    artificial e estudar de tudo um pouco em relação a técnologia. Também gosto de escutar música e
+                    ler livros de filosofia. Estou feliz de fazer esse projeto e quero aprender cada vez mais desse
+                    mundo gigante que é a técnologia.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pt-4">
+                    <div class="p-4 rounded-xl bg-darkblue-800/80 gold-border">
+                        <span class="block text-gold-400 font-bold text-sm">Foco Principal</span>
+                        <span class="text-gray-300 text-sm">FullStack - Desenvolvimento Web</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-darkblue-800/80 gold-border">
+                        <span class="block text-gold-400 font-bold text-sm">Linguagem Favorita</span>
+                        <span class="text-gray-300 text-sm">Java ☕ & Javascript</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-darkblue-800/80 gold-border col-span-2 md:col-span-1">
+                        <span class="block text-gold-400 font-bold text-sm">Meta Atual</span>
+                        <span class="text-gray-300 text-sm">Estudando DataScience, CyberSegurança e Java +
+                            Game-Dev</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-5 flex flex-col items-center order-1 lg:order-2">
+                <!-- Espaço para Imagem do Estudante 2 -->
+                <div
+                    class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden gold-border bg-darkblue-800 flex items-center justify-center group shadow-xl">
+                    <!-- Substitua a tag img abaixo pela imagem real do Estudante 2 -->
+                    <!-- <img src="caminho-da-foto-2.jpg" alt="Foto do Estudante 2" class="w-full h-full object-cover"> -->
+                    <div class="text-center p-6 text-gray-400 group-hover:text-gold-400 transition-colors">
+                        <img src="assets/DaviImagem.png" alt="Foto de Davi - Estudante 2"
+                            class=" mx-auto mb-3 rounded-full object-cover">
+                    </div>
+                </div>
+                <div class="mt-4 text-center">
+                    <span class="text-xs uppercase tracking-widest text-gold-400 font-semibold">Membro da Equipe</span>
+                    <h3 class="font-serif text-2xl font-bold text-white mt-1">Davi A. Lopes</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOCO 3: APRESENTAÇÃO PROFISSIONAL -->
+        <section
+            class="reveal bg-darkblue-900/60 backdrop-blur-md p-8 md:p-16 rounded-3xl gold-border shadow-2xl text-center relative overflow-hidden">
+            <div
+                class="absolute -right-20 -top-20 w-80 h-80 bg-gold-500/10 rounded-full filter blur-[80px] pointer-events-none">
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div
+                    class="inline-block px-4 py-1.5 rounded-full bg-gold-500/10 text-gold-400 text-xs font-bold tracking-widest uppercase border border-gold-500/30">
+                    • Apresentação Profissional
+                </div>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white">
+                    Nossa Visão e <span class="gold-gradient-text">Capacidade Profissional</span>
+                </h2>
+                <p class="text-gray-300 text-base md:text-lg leading-relaxed font-light">
+                    Ambos possuem técnico relacionado com técnologia e temos interesse e curiosidade na área, sendo
+                    ambos para a área de DataScience e Desenvolvimento, sabemos o básico de Git e Github e desenvolvemos
+                    projetos simples de prática e introdutórios em áreas de interesse.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 text-left">
+                    <div class="p-6 rounded-2xl bg-darkblue-800/90 gold-border">
+                        <h4 class="text-gold-400 font-serif font-bold text-xl mb-2">Stack Tecnológica & Ferramentas</h4>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Ambos já tiveram contato com html e css básico e temos SQL e DataScience como estudos em
+                            comum.
+                        </p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-darkblue-800/90 gold-border">
+                        <h4 class="text-gold-400 font-serif font-bold text-xl mb-2">Projetos & Colaboração</h4>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Para projetos em equipe nós discutimos sobre o problema e quebramos ele em partes, e
+                            dividimos as partes entre os membros da equipe. Dependendo do problema paramos para discutir
+                            novamente sobre o problema e suas soluções.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOCO 4: AGRADECIMENTO -->
+        <section
+            class="reveal bg-gradient-to-br from-darkblue-900 via-darkblue-800 to-darkblue-950 p-8 md:p-16 rounded-3xl gold-border shadow-2xl text-center relative">
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div
+                    class="inline-block px-4 py-1.5 rounded-full bg-gold-500/10 text-gold-400 text-xs font-bold tracking-widest uppercase border border-gold-500/30">
+                    • Agradecimento
+                </div>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white">
+                    Agradecemos pela <span class="gold-gradient-text">Visita!</span>
+                </h2>
+                <div class="contact-container">
+
+                    <h4>Email</h4>
+
+                    <div class="contact-links">
+                        <a href="https://mail.google.com/mail/u/0/#inbox">
+                            matias.viniius432@gmail.com
+                        </a>
+
+                        <a href="https://mail.google.com/mail/u/0/#inbox">
+                            daviponteslopes12@gmail.com
+                        </a>
+                    </div>
+
+                    <h4>LinkedIn</h4>
+
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/">
+                            LinkedIn - Marcos
+                        </a>
+
+                        <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit">
+                            LinkedIn - Davi
+                        </a>
+                    </div>
+
+                    <h4>Github</h4>
+
+                    <div class="contact-links">
+                        <a href="https://github.com/">
+                            Github - Marcos
+                        </a>
+
+                        <a href="https://github.com/daviponteslopes12-web">
+                            Github - Davi
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="border-t border-gold-500/20 mt-32 py-12 text-center text-gray-400 text-sm">
+        <p>© 2026 • Desenvolvido com dedicação por estudantes de programação. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- SCRIPT PARA ANIMAÇÕES DE SCROLL -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const reveals = document.querySelectorAll(".reveal");
+
+            function revealOnScroll() {
+                for (let i = 0; i < reveals.length; i++) {
+                    let windowHeight = window.innerHeight;
+                    let elementTop = reveals[i].getBoundingClientRect().top;
+                    let elementVisible = 150;
+
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add("active");
+                    }
+                }
+            }
+
+            window.addEventListener("scroll", revealOnScroll);
+            // Executar uma vez ao carregar caso já estejam visíveis
+            revealOnScroll();
+        });
+    </script>
+</body>
+
+</html>
