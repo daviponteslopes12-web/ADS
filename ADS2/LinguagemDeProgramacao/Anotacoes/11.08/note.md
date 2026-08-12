@@ -36,7 +36,8 @@
 - git switch <nome> (Mudar entre branches)
 - git switch -c <nome> (Cria e muda para a branch)
 - git merge <branch> (incorpora alterações de outra branch para a que voce está)
-- git branch -d <nome> ()
+- git branch -d <nome> (deleta a branch local)
+- git push origin --delete <nome> (deleta a branch no Github (remoto))
 ```
 
 ---
@@ -44,9 +45,9 @@
 ### Comandos de histórico
 
 ```
-- git log
-- git log --oneline
-- git diff
+- git log (mostra o histórico completo de commits)
+- git log --oneline (mostra o histórico de forma resumida, uma linha por commit)
+- git diff (mostra alterações ainda não commitadas)
 ```
 
 ---
@@ -54,9 +55,9 @@
 ### Comandos para desfazer alterações
 
 ```
-- git restore <arquivo>
-- git restore --staged <arquivo>
-- git revert <commit>
+- git restore <arquivo> (descarta alterações não commitadas de um arquivo)
+- git restore --staged <arquivo> (remove o arquivo da área de staging, mantendo a alteração)
+- git revert <commit> (cria um novo commit que desfaz as alterações de um commit anterior)
 ```
 
 ---
@@ -64,12 +65,12 @@
 ### Comandos bastante usados
 
 ```
-- git stash
-- git stash pop
-- git remote -v
-- git remote add origin <url>
-- git reset
-- git rebase
+- git stash (guarda temporariamente alterações não commitadas)
+- git stash pop (recupera as alterações guardadas pelo stash)
+- git remote -v (mostra os repositorios remotos configurados)
+- git remote add origin <url> (adiciona um repositorio remoto chamado origin)
+- git reset (move o estado/ponteiro de commits e pode desfazer alterações)
+- git rebase (reorganiza os commits reaplicando-os sobre outra base)
 ```
 
 ### Comandos para 
