@@ -9,10 +9,6 @@
 - git config --global user.email "email_identificador" (colocar email do git de preferencia)
 - git init (começar um repositório)
 - git clone <url> (clonar um repositorio existente)
-```markdown
-- git config --global user.name "nome_identificador"
-- git config --global user.email "email_identificador" (colocar do git de preferencia)
-- git init (começar um repositório)
 ```
 
 ---
@@ -26,7 +22,6 @@
 - git add <arquivo> (adicionar arquivo específico)
 - git commit -m "mensagem do commit"
 - git push (joga as mudanças para o branch que voce está)
-- git push (joga as mudanças para o main)
 - git pull (puxa as mudanças para o seu repositório)
 - git fetch (mostra as mudanças sem puxar elas)
 ```
