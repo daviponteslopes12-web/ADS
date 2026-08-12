@@ -3,7 +3,7 @@ Anotações e Atividades realizadas ao longo da faculdade de ADS.
 
 ---
 
-## Contexto geral do que foi aprendido ao longo dos semestre
+## Contexto geral do que foi aprendido ao longo dos semestres
 
 ```
 1. ADS - Lógica de Programação com C e sistemas embarcados
