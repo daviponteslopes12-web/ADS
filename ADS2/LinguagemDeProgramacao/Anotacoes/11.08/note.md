@@ -73,4 +73,3 @@
 - git rebase (reorganiza os commits reaplicando-os sobre outra base)
 ```
 
-### Comandos para 
