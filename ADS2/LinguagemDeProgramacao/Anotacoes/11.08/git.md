@@ -6,17 +6,16 @@
 
 ```
 - git config --global user.name "nome_identificador"
-- git config --global user.email "email_identificador" (colocar email do git de preferencia)
+- git config --global user.email "email_identificador" (colocar email do git de preferência)
 - git init (começar um repositório)
 - git clone <url> (clonar um repositorio existente)
 ```
 
 ---
 
-### Comandos usados dia a dia
+### Comandos usados no dia a dia
 
 ```
-```markdown
 - git status
 - git add . (adicionar tudo)
 - git add <arquivo> (adicionar arquivo específico)
