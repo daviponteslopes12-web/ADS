@@ -1,16 +1,35 @@
-# Entidades de uma padaria
+## raciocínio de modelagem de dados
+1. Padaria
 
-- cliente
 - funcionario
+    - id/cpf
+    - nome
+    - data_nasc
+    - salario
+    - cargo
+    - data_cadastro
 - produto
-    - nome (composto)
-    - data_validade (derivado ou simples)
-    - preço (simples)
-    - estoque (simples)
-- marca (simples)
-- pedido
+    - id/cod_barras
+    - nome
+    - marca
+    - categoria
+    - custo_prod
+    - preco
+    - tipo
+    - nome_forn
+- cliente
+    - id/cpf
+    - nome
+    - telefone
+    - endereco
+    - tipo
+    - data_cadastro
+- venda
+    - id/cod_unico
+    - valor_total
+    - 
+- entrega
 
-*data_validade poderia ser derivado de acordo com a data_producao.*
 
 ---
 
@@ -24,14 +43,29 @@
 - Entidades
 - Atributos
 - Relacionamentos
-- **Pensamento sistemático**
+- **Raciocínio de modelagem de dados**
 
 ---
 
-### Anotações
-
-**Entidade Fraca**
-- Depende de uma outra tabela para tirar os dados
+## Anotações
 
 **Entidade forte**
-- Evitar ficar mexendo
+- Consegue existir sozinha no banco.
+- Possui identificação própria (PK)
+
+*** Como identificar? ***
+Veja se os dados da entidade podem ser identificados sem auxílio de nenhuma outra entidade.
+
+**Entidade Fraca**
+- Depende de uma outra entidade para existir ou ser identificada.
+
+*** Como identificar? ***
+Entidade fraca = depende de outra entidade para identificar seus registros.
+
+---
+
+## **Atributos**
+- **Simples** -> Atributo que não precisa ser dividido em partes menores. (idade)
+- **Composto** -> Pode ser dividido em partes menores. (nome_completo).
+- **Multivalorado** -> Atributo que pode possuir vários valores para a mesma entidade (telefone).
+- **Derivado** -> Atributo em que o valor pode ser calculado apartir de outro dado (idade através de data_nascimento).
