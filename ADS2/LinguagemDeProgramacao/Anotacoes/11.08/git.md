@@ -35,8 +35,10 @@
 - git switch <nome> (Mudar entre branches)
 - git switch -c <nome> (Cria e muda para a branch)
 - git merge <branch> (incorpora alterações de outra branch para a que voce está)
+- git push origin --delete <nome> (deleta a branch no Github)
 - git branch -d <nome> (deleta a branch local)
-- git push origin --delete <nome> (deleta a branch no Github (remoto))
+- git branch -a (mostra branches locais + referencias remotas)
+- git fetch --prume (atualiza as referencias locais)
 ```
 
 ---
