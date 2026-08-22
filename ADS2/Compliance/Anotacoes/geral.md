@@ -1,7 +1,7 @@
-````md
-# Resumo — Criptografia e Segurança
+# COMPLIANCE E SEGURANÇA
 
-## 1. Chaves criptográficas
+---
+## Chaves criptográficas
 
 São chaves utilizadas por algoritmos criptográficos para proteger, assinar e verificar dados.
 
@@ -11,26 +11,25 @@ Sua importância está em garantir:
 - Autenticidade
 
 ---
-
-## 2. Criptografia simétrica
+## Criptografia simétrica
 
 Utiliza uma única chave secreta para criptografar e descriptografar dados.
 
 É mais rápida e adequada para grandes quantidades de dados.
 
-Exemplo:
+### HS256 (simétrica)
+
+Utiliza uma chave secreta compartilhada.
 
 ```text
-Chave secreta
-     ↓
-Criptografa → Dados → Descriptografa
-                       ↑
-                 mesma chave
-````
+JWT_SECRET → assina JWT
+JWT_SECRET → verifica JWT
+```
+
+É simples e rápido.
 
 ---
-
-## 3. Criptografia assimétrica
+## Criptografia assimétrica
 
 Utiliza duas chaves relacionadas matematicamente:
 
@@ -39,9 +38,19 @@ Utiliza duas chaves relacionadas matematicamente:
 
 Pode ser utilizada para assinatura digital, autenticação e troca segura de chaves.
 
----
+### RS256 (assimétrica)
 
-## 4. Assinatura digital
+Utiliza um par de chaves:
+
+```text
+Chave privada → assina JWT
+Chave pública  → verifica JWT
+```
+
+É útil quando vários serviços precisam verificar tokens sem ter acesso à chave capaz de criar novas assinaturas.
+
+---
+## Assinatura digital
 
 Serve para verificar:
 
@@ -58,37 +67,13 @@ Chave pública  → verifica assinatura
 Assinar não significa esconder o conteúdo.
 
 ---
-
-## 5. JWT
+## JWT
 
 JWT é um token utilizado principalmente para autenticação.
 
 Ele normalmente é **assinado**, não criptografado.
 
-### HS256 (simétrica)
-
-Utiliza uma chave secreta compartilhada.
-
-```text
-JWT_SECRET → assina JWT
-JWT_SECRET → verifica JWT
-```
-
-É simples e rápido.
-
-### RS256 (assimétrica)
-
-Utiliza um par de chaves:
-
-```text
-Chave privada → assina JWT
-Chave pública  → verifica JWT
-```
-
-É útil quando vários serviços precisam verificar tokens sem ter acesso à chave capaz de criar novas assinaturas.
-
 ---
-
 ## 6. TLS / HTTPS
 
 TLS protege a comunicação entre cliente e servidor.
@@ -108,7 +93,6 @@ Dados protegidos
 ```
 
 ---
-
 ## 7. Diffie-Hellman
 
 Resolve o problema de estabelecer uma **chave secreta compartilhada através de um canal público**.
@@ -151,7 +135,6 @@ Chave compartilhada = 7
 O Diffie-Hellman **não criptografa os dados diretamente**. Ele estabelece a chave que pode ser usada posteriormente em uma criptografia simétrica.
 
 ---
-
 ## 8. Diferenças principais
 
 ```text
@@ -167,3 +150,4 @@ RS256        → assinatura assimétrica
 Diffie-Hellman → estabelece uma chave compartilhada
 TLS           → protege a comunicação usando esses mecanismos
 ```
+
