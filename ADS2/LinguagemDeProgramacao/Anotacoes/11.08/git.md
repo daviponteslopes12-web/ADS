@@ -37,8 +37,9 @@
 - git merge <branch> (incorpora alterações de outra branch para a que voce está)
 - git push origin --delete <nome> (deleta a branch no Github)
 - git branch -d <nome> (deleta a branch local)
+- git branch -dr origin/<nome> (deleta referencia local da branch)
 - git branch -a (mostra branches locais + referencias remotas)
-- git fetch --prume (atualiza as referencias locais)
+- git fetch --prune (atualiza as referencias locais)
 ```
 
 ---
