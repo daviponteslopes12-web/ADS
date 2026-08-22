@@ -74,7 +74,7 @@ JWT é um token utilizado principalmente para autenticação.
 Ele normalmente é **assinado**, não criptografado.
 
 ---
-## 6. TLS / HTTPS
+## TLS / HTTPS
 
 TLS protege a comunicação entre cliente e servidor.
 
@@ -93,7 +93,7 @@ Dados protegidos
 ```
 
 ---
-## 7. Diffie-Hellman
+## Diffie-Hellman
 
 Resolve o problema de estabelecer uma **chave secreta compartilhada através de um canal público**.
 
@@ -135,7 +135,7 @@ Chave compartilhada = 7
 O Diffie-Hellman **não criptografa os dados diretamente**. Ele estabelece a chave que pode ser usada posteriormente em uma criptografia simétrica.
 
 ---
-## 8. Diferenças principais
+## Diferenças principais
 
 ```text
 Criptografar → esconder o conteúdo
@@ -150,4 +150,18 @@ RS256        → assinatura assimétrica
 Diffie-Hellman → estabelece uma chave compartilhada
 TLS           → protege a comunicação usando esses mecanismos
 ```
+---
+## DES
 
+Data Encryption Standard, é um algoritmo de criptografia simétrica (utiliza a mesma chave para criptografar e descriptografar).
+
+O DES é uma cifra de bloco simétrica. Isso significa duas coisas:
+
+- Bloco: trabalha com grupos fixos de dados, neste caso 64 bits.
+- Simétrica: utiliza a mesma chave para criptografar e descriptografar.
+
+Aqui aparece uma distinção importante: o DES possui uma chave armazenada de 64 bits, mas 8 desses bits são utilizados para paridade. Portanto, apenas 56 bits contribuem efetivamente para a segurança.
+
+DES é considerado inseguro atualmente por usar uma criptografia de 56 bits que pode ser quebrada por computadores modernos. 
+
+O AES (Advanced Encryption Standard) é utilizado no lugar.
