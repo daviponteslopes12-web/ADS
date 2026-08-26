@@ -20,7 +20,7 @@
 
 *** Como identificar? ***
 Veja se os dados da entidade podem ser identificados sem auxílio de nenhuma outra entidade.
-
+---
 **Entidade Fraca**
 - Depende de uma outra entidade para existir ou ser identificada.
 
