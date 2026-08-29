@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição</title>
+</head>
+<body>
+    <header>
+        <h1>TechWeek 2026 - Inscrição</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Página Inicial</a></li>
+                <li><a href="programacao.html">Ver Programação</a></li>
+                <li><a href="inscricao.html">Fazer Inscrição</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <h2>Formulário de Participação</h2>
+        <p>Preencha os dados abaixo com atenção. Campos marcados com * são obrigatórios.</p>
+
+        <form action="sucesso.html" method="GET">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label for="nome">Nome Completo *</label><br>
+                <input type="text" id="nome" name="nome" required minlength="5" placeholder="Digite seu nome"><br><br>
+
+                <label for="email">E-mail Profissional *</label><br>
+                <input type="email" id="email" name="email" required placeholder="exemplo@gmail.com"><br><br>
+
+                <label for="nascimento">Data de Nascimento *</label><br>
+                <input type="date" id="nascimento" name="nascimento" required max="2010-01-01"><br><br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Perfil</legend>
+                <label for="experiencia">Nível de Experiência</label><br>
+                <select name="experiencia" id="experiencia" required>
+                    <option value="Selecione..."></option>
+                    <option value="iniciante">Estudante</option>
+                    <option value="profissional">Profissional</option>
+                </select><br><br>
+
+                <label>
+                    <input type="checkbox" name="termos" required>
+                    Aceito os termos de participação no evento. *
+                </label>
+            </fieldset>
+            <br>
+            <button type="submit">Confirmar Inscrição</button>
+        </form>
+    </main>
+</body>
+</html>
