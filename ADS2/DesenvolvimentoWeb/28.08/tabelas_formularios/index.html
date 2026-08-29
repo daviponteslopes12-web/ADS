@@ -23,6 +23,8 @@
         table {
             border-collapse: collapse;
             border: 4px double black;
+            width: 400px;
+            text-align: center;
         }
 
         table th, table td {
@@ -68,12 +70,18 @@
         }
 
         button {
-            padding: 5px;
+            padding: 6px;
             border-radius: 15px;
             border: none;
             font: bold;
             width: 100%;
             cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+            background-color: silver;
         }
 
         fieldset {
