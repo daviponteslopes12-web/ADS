@@ -1,4 +1,6 @@
-1. npm init --y -> cria o projeto node
-2. npm i -D typescript -> instalar typescript como dependencia de desenvolvimento
-3. npx tsc --init -> cria arquivo de configuração do typescript
-4. npx tsc index.ts -> transpilar para javascript
+1. npm init --y 
+2. npm i -D typescript 
+3. npm i -D tsx
+4. npm i -D @types/node
+5. npx tsc --init 
+6. npx tsc index.ts 
