@@ -15,12 +15,13 @@ notas.forEach((nota) => {
     console.log(nota);
 });
 
-
-//.map() -> cria um novo array apartir do original (de todas as 100 notas, quero que cada uma seja mostrada)
-//.filter() -> cria novo array com um filtro (de 100 notas quero apenas as maiores que 6)
-//.find() -> faz uma busca dentro do array (de 100 notas quero a primeira que tenha número par)
-//.reduce() -> reduz o array a um único valor (de 100 notas quero a soma de todas)
-// NÃO MUDAM O ARRAY ORIGINAL, ELES CRIAM UM NOVO, DA PARA FAZER ENCADEADO .filter().map()
+/*
+.map() -> cria um novo array apartir do original (de todas as 100 notas, quero que cada uma seja mostrada)
+.filter() -> cria novo array com um filtro (de 100 notas quero apenas as maiores que 6)
+.find() -> faz uma busca dentro do array (de 100 notas quero a primeira que tenha número par)
+.reduce() -> reduz o array a um único valor (de 100 notas quero a soma de todas)
+NÃO MUDAM O ARRAY ORIGINAL, ELES CRIAM UM NOVO, DA PARA FAZER ENCADEADO .filter().map()
+*/
 
 //spread e destructuring (desestruturação)
 // spread -> espalha os itens do array em outro, exemplo a baixo;
@@ -32,3 +33,18 @@ const juntandoNotas = [...notas, ...notas2]; // aqui eu crio um array com os val
 
 // desestruturar um array, n1 recebe o valor da posição 0 do array, e assim vai.
 const [n1, n2, n3, n4] = notas;
+
+
+// Matrizes (arrays de arrays), TypeScript, uma linha pode ter várias colunas
+const tabela: number[][] = [];
+
+
+/**
+ * Métodos de string 
+ * .toLowerCase()
+ * .toUpperCase()
+ * .trim()
+ * .split()
+ * .slice()
+*/ 
+
