@@ -48,14 +48,10 @@ h1 {
     transform: scale(1.05);
 }
 
-nav {
-    display: flex;
-    gap: 2rem;
-}
-
 nav a {
     text-decoration: none;
     color: #fff;
+    margin-right: 2rem;
     font-weight: bold;
 }
 
