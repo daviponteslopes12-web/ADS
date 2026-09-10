@@ -1,8 +1,9 @@
 /**
- * Aula 03 - TypeScript: 
+ * Aula 03 e Aula 04- TypeScript: 
  * Variáveis, 
  * Constantes, 
  * Operadores e Expressões
+ * Arrays, matrizes e strings
  */
 
 //==================================================
