@@ -7,7 +7,7 @@ Anotações e Atividades realizadas ao longo da faculdade de ADS.
 
 
 1. **ADS** - Lógica de Programação com a linguagem **C** e sistemas embarcados.
-2. **ADS2** - Desenvolvimento Web + Banco de dados **relacionais** e versionamento com **Git**.
+2. **ADS2** - Desenvolvimento Web **(HTML, CSS e TypeScript)** + Banco de dados **relacionais** e versionamento com **Git**.
 3. **ADS3** - 
 4. **ADS4** - 
 5. **ADS5** - 
