@@ -1,4 +1,5 @@
 ## Tópicos de aprofundamento em bancos de dados
+
 - Motores SGBD 
 - Interfaces gráficas
 - NoSQL
@@ -19,17 +20,19 @@
 - Possui identificação própria (PK)
 
 *** Como identificar? ***
-Veja se os dados da entidade podem ser identificados sem auxílio de nenhuma outra entidade.
+- Veja se os dados da entidade podem ser identificados sem auxílio de nenhuma outra entidade.
+
 ---
+
 **Entidade Fraca**
 - Depende de uma outra entidade para existir ou ser identificada.
 
-*** Como identificar? ***
-Entidade fraca = depende de outra entidade para identificar seus registros.
+**Como identificar?**
+- Entidade fraca = depende de outra entidade para identificar seus registros.
 
 ---
 
-## **Atributos**
+**Atributos**
 - **Simples** -> Atributo que não precisa ser dividido em partes menores. (idade)
 - **Composto** -> Pode ser dividido em partes menores. (nome_completo).
 - **Multivalorado** -> Atributo que pode possuir vários valores para a mesma entidade (telefone).
