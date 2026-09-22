@@ -1,0 +1,18 @@
+{
+  "name": "22.09",
+  "version": "1.0.0",
+  "description": "- npm init --y\r - npm i -D typescript\r - npm i -D @types/node\r - npm i -D vitest",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
+  }
+}
