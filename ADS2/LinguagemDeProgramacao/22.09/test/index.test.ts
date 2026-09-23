@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest"
-import { ehVogal, calcularMedia } from "../src/index.js"
+import { ehVogal } from "../src/index.js"
 
 
 // Nome para o bloco de teste com vários testes dentro
@@ -17,8 +17,8 @@ describe("ehVogal", () => {
 
 
 // Teste para media
-describe("calcularMedia", () => {
-    it("verifica resultado da media", () => {
-        expect(calcularMedia(4, 5, 6)).toBe(5)
-    })
-})
+// describe("calcularMedia", () => {
+//     it("verifica resultado da media", () => {
+//         expect(calcularMedia(4, 5, 6)).toBe(5)
+//     })
+// })

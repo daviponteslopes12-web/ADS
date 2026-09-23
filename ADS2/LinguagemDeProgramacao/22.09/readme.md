@@ -3,12 +3,15 @@
 Nessa aula aprendemos sobre testes unitários, criamos um arquivo separado dentro de src, index.ts
 aonde fica as funções.
 
-Essas funções são usadas no arquivo test/index.test.ts, nos testes temos o 
+Essas funções são usadas no arquivo test/index.test.ts, nos testes temos:
+
 - describe - o nome do bloco de testes (o que aquele bloco vai testar).
 - it - o nome do teste (teste específico dentro do bloco).
-- expect - recebe função com os valores testados e o resultado esperado.
+- expect + toBe - recebe função com os valores testados e o resultado esperado.
+---
 
-exemplo
+**exemplo**
+
 ```
 describe("funcaoSomar) () => {
     it("TesteDeSoma) () => {
@@ -17,8 +20,15 @@ describe("funcaoSomar) () => {
 }
 ```
 
-## Configurações Iniciais
+A ideia é criar o teste e guiar a IA para criar a função.
 
+- Pense que você coloca no teste o resultado esperado de uma função com valores específicos.
+- Sua função precisa ser feita para não quebrar e retornar um valor válido para o teste.
+- No teste você valida o que pode passar e a IA escreve uma função que passa naquele teste.
+
+---
+
+## Configurações Iniciais
 
 ### Comandos
 - npm init -y
@@ -28,6 +38,7 @@ describe("funcaoSomar) () => {
 
 - npx tsc --init
 
+---
 
 ### tsconfig
 - rootDir - descomentar
