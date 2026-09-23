@@ -20,8 +20,6 @@ describe("funcaoSomar) () => {
 }
 ```
 
-A ideia é criar o teste e guiar a IA para criar a função.
-
 - Pense que você coloca no teste o resultado esperado de uma função com valores específicos.
 - Sua função precisa ser feita para não quebrar e retornar um valor válido para o teste.
 - No teste você valida o que pode passar e a IA escreve uma função que passa naquele teste.
